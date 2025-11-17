@@ -12,7 +12,7 @@ public class Hotelservice {
     public static SendMessage intro(Long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Assalomu alaykum Iltimos tilni tanlang :");
+        SM.setText("Assalomu alaykum Iltimos tilni tanlang");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
