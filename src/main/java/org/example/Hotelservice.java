@@ -65,4 +65,13 @@ public class Hotelservice {
         SM.setReplyMarkup(imk);
         return SM;
     }
+
+    public SendMessage shaharlar(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Qayerga bormoqchisiz");
+
+
+        return SM;
+    }
 }
