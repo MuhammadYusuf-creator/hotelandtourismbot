@@ -71,7 +71,26 @@ public class Hotelservice {
         SM.setChatId(chatId);
         SM.setText("Qayerga bormoqchisiz");
 
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
 
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Toshkent");
+        btn.setCallbackData("toshkentId");
+        row.add(btn);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Andijon");
+        button.setCallbackData("andijonId");
+        row.add(button);
+        rowlist.add(row);
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
         return SM;
     }
 }
