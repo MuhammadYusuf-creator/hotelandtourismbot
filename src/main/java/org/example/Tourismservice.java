@@ -21,51 +21,61 @@ public class Tourismservice {
         b1.setText("Registon maydoni");
         b1.setCallbackData("b1");
         row1.add(b1);
-
-        InlineKeyboardButton b2 = new InlineKeyboardButton();
-        b2.setText("Shohi Zinda majmuasi");
-        b2.setCallbackData("b2");
-        row1.add(b2);
         rowlist.add(row1);
 
+        InlineKeyboardButton b2 = new InlineKeyboardButton();
         List<InlineKeyboardButton> row2 = new ArrayList<>();
-        InlineKeyboardButton b3 = new InlineKeyboardButton();
-        b3.setText("Go‘ri Amir maqbarasi");
-        b3.setCallbackData("b3");
-        row2.add(b3);
-
-        InlineKeyboardButton b4 = new InlineKeyboardButton();
-        b4.setText("Bibi Xonim masjidi");
-        b4.setCallbackData("b4");
-        row2.add(b4);
+        b2.setText("Shohi Zinda majmuasi");
+        b2.setCallbackData("b2");
+        row2.add(b2);
         rowlist.add(row2);
 
         List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton b3 = new InlineKeyboardButton();
+        b3.setText("Go‘ri Amir maqbarasi");
+        b3.setCallbackData("b3");
+        row3.add(b3);
+        rowlist.add(row3);
+
+        InlineKeyboardButton b4 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        b4.setText("Bibi Xonim masjidi");
+        b4.setCallbackData("b4");
+        row4.add(b4);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
         InlineKeyboardButton b5 = new InlineKeyboardButton();
         b5.setText("Ulug‘bek rasadxonasi");
         b5.setCallbackData("b5");
-        row3.add(b5);
+        row5.add(b5);
+        rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
         InlineKeyboardButton b6 = new InlineKeyboardButton();
         b6.setText("Afrosiyob muzeyi");
         b6.setCallbackData("b6");
-        row3.add(b6);
-        rowlist.add(row3);
+        row6.add(b6);
+        rowlist.add(row6);
 
-        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        List<InlineKeyboardButton> row7 = new ArrayList<>();
         InlineKeyboardButton b7 = new InlineKeyboardButton();
         b7.setText("Hazrati Xizr masjidi");
         b7.setCallbackData("b7");
-        row4.add(b7);
+        row7.add(b7);
+        rowlist.add(row7);
 
+        List<InlineKeyboardButton> row8 = new ArrayList<>();
         InlineKeyboardButton b8 = new InlineKeyboardButton();
         b8.setText("Siyob bozori");
         b8.setCallbackData("b8");
-        row4.add(b8);
-        rowlist.add(row4);
+        row8.add(b8);
+        rowlist.add(row8);
 
         imk.setKeyboard(rowlist);
         sendMessage.setReplyMarkup(imk);
         return sendMessage;
     }
+
+
 }
