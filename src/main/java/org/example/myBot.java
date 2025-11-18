@@ -24,6 +24,14 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
+            if (text.equals("🇺🇿O'zbekcha")) {
+                try {
+                    execute(hotel.menu(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
         }
     }
 
