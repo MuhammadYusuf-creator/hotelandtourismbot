@@ -31,6 +31,13 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (text.equals("Samarqand")){
+                try {
+                    execute(tourism.sendPhoto(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
         }
     }
