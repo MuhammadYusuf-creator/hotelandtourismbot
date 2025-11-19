@@ -155,4 +155,89 @@ public class Hotelservice {
         SM.setReplyMarkup(imk);
         return SM;
     }
+
+    public SendMessage toshkent(long chatId){
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage andijon(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage buxoro(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage jizzax(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage qashqadaryo(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage navoiy(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage namangan (long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage samarqand(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage surxondaryo(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage sirdaryo(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage fargona(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
+    public SendMessage xorazm(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+
+        return SM;
+    }
+
 }
