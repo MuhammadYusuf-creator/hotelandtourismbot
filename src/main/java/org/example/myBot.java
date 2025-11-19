@@ -40,6 +40,23 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (data.equals("menuhotelId")) {
+                try {
+                    execute(hotel.shaharlarhotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("menutourismId")) {
+                try {
+                    execute(tourism.shaharlartourism(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
         }
 
     }
