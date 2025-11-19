@@ -1,6 +1,7 @@
 package org.example;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
@@ -24,22 +25,23 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
-            if (text.equals("🇺🇿O'zbekcha")) {
+
+        } else if (update.hasCallbackQuery()) {
+          CallbackQuery callbackQuery = update.getCallbackQuery();
+          String data = callbackQuery.getData();
+          Long chatId = callbackQuery.getMessage().getChatId();
+
+            System.out.println(data);
+
+            if (data.equals("ozbekId")) {
                 try {
                     execute(hotel.menu(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
-            if (text.equals("Samarqand")){
-                try {
-                    execute(tourism.sendPhoto(chatId));
-                } catch (TelegramApiException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
         }
+
     }
 
 
