@@ -69,7 +69,7 @@ public class Hotelservice {
     public SendMessage shaharlarhotel(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Qayerga bormoqchisiz");
+        SM.setText("Qayerdagi mehmonhonalar kerak");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();

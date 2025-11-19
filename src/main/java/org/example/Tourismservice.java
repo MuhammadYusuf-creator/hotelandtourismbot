@@ -15,7 +15,7 @@ public class Tourismservice {
     public SendMessage shaharlartourism(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Qayerga bormoqchisiz");
+        SM.setText("Qayerni aylanmoqchisiz");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
@@ -941,4 +941,6 @@ public class Tourismservice {
         sendMessage.setReplyMarkup(imk);
         return sendMessage;
     }
+
+
 }
