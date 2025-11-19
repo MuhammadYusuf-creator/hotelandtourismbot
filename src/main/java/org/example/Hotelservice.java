@@ -66,7 +66,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage shaharlar(long chatId) {
+    public SendMessage shaharlarhotel(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Qayerga bormoqchisiz");

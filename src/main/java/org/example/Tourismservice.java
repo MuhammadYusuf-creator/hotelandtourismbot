@@ -1,8 +1,6 @@
 package org.example;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
-import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
@@ -10,6 +8,100 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tourismservice {
+
+
+
+
+    public SendMessage shaharlartourism(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Qayerga bormoqchisiz");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Toshkent");
+        btn.setCallbackData("toshkenttourismId");
+        row.add(btn);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Andijon");
+        button.setCallbackData("andijontourismId");
+        row.add(button);
+        rowlist.add(row);
+
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+        InlineKeyboardButton btn1 = new InlineKeyboardButton();
+        btn1.setText("Buxoro");
+        btn1.setCallbackData("buxorotourismId");
+        row1.add(btn1);
+
+        InlineKeyboardButton btn2 = new InlineKeyboardButton();
+        btn2.setText("Jizzax");
+        btn2.setCallbackData("jizzaxtourismId");
+        row1.add(btn2);
+        rowlist.add(row1);
+
+
+        List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton btn3 = new InlineKeyboardButton();
+        btn3.setText("Qashqadaryo");
+        btn3.setCallbackData("qashqadaryotourismId");
+        row3.add(btn3);
+
+        InlineKeyboardButton btn4 = new InlineKeyboardButton();
+        btn4.setText("Navoiy");
+        btn4.setCallbackData("navoiytourismId");
+        row3.add(btn4);
+        rowlist.add(row3);
+
+
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        InlineKeyboardButton btn5 = new InlineKeyboardButton();
+        btn5.setText("Namangan");
+        btn5.setCallbackData("namangantourismId");
+        row4.add(btn5);
+
+        InlineKeyboardButton btn6 = new InlineKeyboardButton();
+        btn6.setText("Samarqand");
+        btn6.setCallbackData("SamarqandtourismId");
+        row4.add(btn6);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
+        InlineKeyboardButton btn7 = new InlineKeyboardButton();
+        btn7.setText("Surxondaryo");
+        btn7.setCallbackData("surxondaryotourismId");
+        row5.add(btn7);
+
+        InlineKeyboardButton btn8 = new InlineKeyboardButton();
+        btn8.setText("Sirdaryo");
+        btn8.setCallbackData("sirdaryotourismId");
+        row5.add(btn8);
+        rowlist.add(row5);
+
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton btn9 = new InlineKeyboardButton();
+        btn9.setText("Farg'ona");
+        btn9.setCallbackData("fargonatourismId");
+        row6.add(btn9);
+
+        InlineKeyboardButton btn10 = new InlineKeyboardButton();
+        btn10.setText("Xorazm");
+        btn10.setCallbackData("xorazmtourismId");
+        row6.add(btn10);
+        rowlist.add(row6);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return SM;
+    }
+
     public static SendMessage samarqand(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
