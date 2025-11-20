@@ -160,6 +160,44 @@ public class Hotelservice {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
 
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("Registon maydoni");
+        b1.setCallbackData("registonId");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        InlineKeyboardButton b2 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row2 = new ArrayList<>();
+        b2.setText("Shohi Zinda majmuasi");
+        b2.setCallbackData("shohizindaId");
+        row2.add(b2);
+        rowlist.add(row2);
+
+        List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton b3 = new InlineKeyboardButton();
+        b3.setText("Go‘ri Amir maqbarasi");
+        b3.setCallbackData("guriamirId");
+        row3.add(b3);
+        rowlist.add(row3);
+
+        InlineKeyboardButton b4 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        b4.setText("Bibi Xonim masjidi");
+        b4.setCallbackData("bibixonimId");
+        row4.add(b4);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
+        InlineKeyboardButton b5 = new InlineKeyboardButton();
+        b5.setText("Ulug‘bek rasadxonasi");
+        b5.setCallbackData("ulugbekrasadxonaId");
+        row5.add(b5);
+        rowlist.add(row5);
         return SM;
     }
 
@@ -167,6 +205,44 @@ public class Hotelservice {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
 
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("Registon maydoni");
+        b1.setCallbackData("registonId");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        InlineKeyboardButton b2 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row2 = new ArrayList<>();
+        b2.setText("Shohi Zinda majmuasi");
+        b2.setCallbackData("shohizindaId");
+        row2.add(b2);
+        rowlist.add(row2);
+
+        List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton b3 = new InlineKeyboardButton();
+        b3.setText("Go‘ri Amir maqbarasi");
+        b3.setCallbackData("guriamirId");
+        row3.add(b3);
+        rowlist.add(row3);
+
+        InlineKeyboardButton b4 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        b4.setText("Bibi Xonim masjidi");
+        b4.setCallbackData("bibixonimId");
+        row4.add(b4);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
+        InlineKeyboardButton b5 = new InlineKeyboardButton();
+        b5.setText("Ulug‘bek rasadxonasi");
+        b5.setCallbackData("ulugbekrasadxonaId");
+        row5.add(b5);
+        rowlist.add(row5);
         return SM;
     }
 
@@ -174,6 +250,44 @@ public class Hotelservice {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
 
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("Registon maydoni");
+        b1.setCallbackData("registonId");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        InlineKeyboardButton b2 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row2 = new ArrayList<>();
+        b2.setText("Shohi Zinda majmuasi");
+        b2.setCallbackData("shohizindaId");
+        row2.add(b2);
+        rowlist.add(row2);
+
+        List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton b3 = new InlineKeyboardButton();
+        b3.setText("Go‘ri Amir maqbarasi");
+        b3.setCallbackData("guriamirId");
+        row3.add(b3);
+        rowlist.add(row3);
+
+        InlineKeyboardButton b4 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        b4.setText("Bibi Xonim masjidi");
+        b4.setCallbackData("bibixonimId");
+        row4.add(b4);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
+        InlineKeyboardButton b5 = new InlineKeyboardButton();
+        b5.setText("Ulug‘bek rasadxonasi");
+        b5.setCallbackData("ulugbekrasadxonaId");
+        row5.add(b5);
+        rowlist.add(row5);
         return SM;
     }
 
@@ -181,6 +295,44 @@ public class Hotelservice {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
 
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("Registon maydoni");
+        b1.setCallbackData("registonId");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        InlineKeyboardButton b2 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row2 = new ArrayList<>();
+        b2.setText("Shohi Zinda majmuasi");
+        b2.setCallbackData("shohizindaId");
+        row2.add(b2);
+        rowlist.add(row2);
+
+        List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton b3 = new InlineKeyboardButton();
+        b3.setText("Go‘ri Amir maqbarasi");
+        b3.setCallbackData("guriamirId");
+        row3.add(b3);
+        rowlist.add(row3);
+
+        InlineKeyboardButton b4 = new InlineKeyboardButton();
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        b4.setText("Bibi Xonim masjidi");
+        b4.setCallbackData("bibixonimId");
+        row4.add(b4);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
+        InlineKeyboardButton b5 = new InlineKeyboardButton();
+        b5.setText("Ulug‘bek rasadxonasi");
+        b5.setCallbackData("ulugbekrasadxonaId");
+        row5.add(b5);
+        rowlist.add(row5);
         return SM;
     }
 
