@@ -264,7 +264,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage buxoro(long chatId)a{
+    public SendMessage buxoro(long chatId){
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Buxorodagi mehmonxonalar:");
