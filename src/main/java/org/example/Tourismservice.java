@@ -1,6 +1,8 @@
 package org.example;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
@@ -102,6 +104,8 @@ public class Tourismservice {
 
         return SM;
     }
+
+    //head tugadi
 
     public static SendMessage samarqand(Long chatId) {
         SendMessage sendMessage = new SendMessage();
@@ -295,7 +299,7 @@ public class Tourismservice {
 
         List<InlineKeyboardButton> row7 = new ArrayList<>();
         InlineKeyboardButton b7 = new InlineKeyboardButton();
-        b7.setText("Minorasi");
+        b7.setText("Jarkurgan Minorasi");
         b7.setCallbackData("minorasiId");
         row7.add(b7);
         rowlist.add(row7);
@@ -428,14 +432,14 @@ public class Tourismservice {
 
         List<InlineKeyboardButton> row6 = new ArrayList<>();
         InlineKeyboardButton b6 = new InlineKeyboardButton();
-        b6.setText("Tarixiy masjid va madrasalar");
+        b6.setText("Buvayda Tarixiy masjid va madrasalar");
         b6.setCallbackData("tarixiybinolarId");
         row6.add(b6);
         rowlist.add(row6);
 
         List<InlineKeyboardButton> row7 = new ArrayList<>();
         InlineKeyboardButton b7 = new InlineKeyboardButton();
-        b7.setText("Qadimiy qadimiy yo‘llar va tog‘ manzaralari");
+        b7.setText("So'x Qadimiy qadimiy yo‘llar va tog‘ manzaralari");
         b7.setCallbackData("qadimiyollarId");
         row7.add(b7);
         rowlist.add(row7);
@@ -750,7 +754,7 @@ public class Tourismservice {
 
         InlineKeyboardButton b2 = new InlineKeyboardButton();
         List<InlineKeyboardButton> row2 = new ArrayList<>();
-        b2.setText("Jome Masjidi");
+        b2.setText("x");
         b2.setCallbackData("jomemasjidiandijonId");
         row2.add(b2);
         rowlist.add(row2);
@@ -942,6 +946,291 @@ public class Tourismservice {
         sendMessage.setReplyMarkup(imk);
         return sendMessage;
     }
+// viloyat tugad
+//samarqand placec
+    public static SendPhoto registon(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/2"));
+        sendPhoto.setCaption("Samarqandning ramzi. Uchta mashhur madrasa: Ulug‘bek, Tilakori va Shir-Dor madrasalari joylashgan. Amir Temur davridagi eng ulkan me’moriy majmua.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto goriamir(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/3"));
+        sendPhoto.setCaption("XI–XIX asrlarga oid maqbaralar majmuasi. “Tirik shoh” deb tarjima qilinadi. Ko‘k g‘ishtli naqshlari bilan dunyoga mashhur.");
+        return sendPhoto;
+    }
+
+    public static SendPhoto shohizinda(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/4"));
+        sendPhoto.setCaption("Amir Temur, Mirzo Ulug‘bek va Temuriylar sulolasining boshqa vakillari dafn etilgan. Temuriylar me’morchiligining durdonasi.");
+        return sendPhoto;
+    }
+
+    public static SendPhoto bibixonim(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/5"));
+        sendPhoto.setCaption("Amir Temur tomonidan qurdirilgan ulkan jome masjidi. O‘sha davrning eng katta masjidlaridan biri bo‘lgan.");
+        return sendPhoto;
+    }
+
+    public static SendPhoto ulugbekras(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/6"));
+        sendPhoto.setCaption("XV asrda Mirzo Ulug‘bek tomonidan qurilgan astronomik rasadxona. Ulug‘bekning mashhur \"Zij\" astronomik jadvali shu yerda yaratilgan.");
+        return sendPhoto;
+    }
+
+    public static SendPhoto afrosiyob(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/7"));
+        sendPhoto.setCaption("Samarqandning eng qadimgi hududi — Afrosiyobdan topilgan artefaktlar, devoriy rasmlar, qadimgi shahar tarixi namoyish etiladi.");
+        return sendPhoto;
+    }
+
+    public static SendPhoto hazratihizr(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/8"));
+        sendPhoto.setCaption("Juda qadimgi masjid. Chiroyli tepalikda joylashgan, shahar manzarasi juda yorqin ko‘rinadi.");
+        return sendPhoto;
+    }
+
+    public static SendPhoto siyob(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/9"));
+        sendPhoto.setCaption("Mahalliy shirinliklar, mevalar, yong‘oqlar, suvenirlar sotiladigan tarixiy bozor. Turistlar eng ko‘p tashrif buyuradigan joylardan biri.");
+        return sendPhoto;
+    }
 
 
+    //qashqadaryo place
+    public static SendPhoto kquriqxona(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/11"));
+        sendPhoto.setCaption("Yer tarixining million yillik qatlamlari ochiq ko‘rinadigan noyob joy. Geologlar, talabalar va turistlar uchun tabiiy “darslik” vazifasini o‘taydi.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto oqsaroy(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/12"));
+        sendPhoto.setCaption("Amir Temurning ulkan saroyi. Bir vaqtlar Markaziy Osiyodagi eng katta saroy bo‘lgan. Hozir ham baland devor qoldiqlari o‘zining qudratini ko‘rsatadi.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto dorut(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/13"));
+        sendPhoto.setCaption("XIV asrda bunyod etilgan diniy yodgorlik. Amir Temurning otasi Tarag‘ay Bahodir shu yerda dafn etilgan. Tinch, ma’naviy maskan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto dorus(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/14"));
+        sendPhoto.setCaption("Temuriylar sulolasiga oid muhim majmua. Amir Temurning asl rejalangan maqbarasi shu yerda joylashgan. Me’moriy jihatdan juda qadimiy va tarixiy ahamiyatga ega.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto bashr(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/15"));
+        sendPhoto.setCaption("Qashqadaryoning muqaddas joylaridan biri. Ziyoratchilar tez-tez tashrif buyuradigan sokin va xotirjam maskan, qadimiy rivoyatlarga boy.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto qregiston(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/16"));
+        sendPhoto.setCaption("Qarshi shahrining tarixiy markaziy maydoni. Atrofida madrasa, hammom va eski bozorlardan iborat tarixiy majmua joylashgan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto lanagrota(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/17"));
+        sendPhoto.setCaption("Qadimiy va mashhur ziyorat joyi. Langar ota maqbarasi va masjidi bor. Atrofida ulkan chinorlar, sokin muhit mavjud.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto kastronimik(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/18"));
+        sendPhoto.setCaption("Astronomlar uchun ilmiy markaz. Yulduzlar, sayyoralar va kosmik kuzatuvlar o‘tkaziladigan joy. O‘quvchilar va sayyohlar ko‘p tashrif buyuradi.");
+        return sendPhoto;
+
+    }
+
+    //surxondaryo place
+
+    public static SendPhoto fayoztepa(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/20"));
+        sendPhoto.setCaption("Qadimgi Kushon davriga oid buddaviylik ibodatxonasi. Termiz yaqinida joylashgan bo‘lib, arxeologlar tomonidan topilgan eng muhim yodgorliklardan biri.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto kampirtepa(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/21"));
+        sendPhoto.setCaption("Amudaryoning bo‘yida joylashgan eng qadimiy port shahri xarobalari. Bu yerda qadimgi savdo yo‘llari bo‘lgan va ellinistik davrga oid topilmalar ko‘p.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto alhakim(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/22"));
+        sendPhoto.setCaption("Mashhur alloma va mutasavvuf Abu Abdulloh al-Hakim Termiziyning maqbarasi. Ziyoratchilar eng ko‘p boradigan muqaddas joylardan biri.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto sayrob(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/23"));
+        sendPhoto.setCaption("Tarixiy qishloq bo‘lib, qadimiy me’moriy uylar va an’anaviy hayot tarzi bilan mashhur. Sayyohlar uchun jonli “muzey-qishloq”.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto darband(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/24"));
+        sendPhoto.setCaption("Tabiiy daralar, toshli tog‘ yo‘laklari va chiroyli manzaralari bilan mashhur. Tog‘ sayohatlari va piknik uchun eng mashhur joylardan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto qumtepa(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/25"));
+        sendPhoto.setCaption("Qadimiy shahar xarobalari joylashgan arxeologik hudud. Kushonlar davriga oid katta ahamiyatga ega tarixiy maskan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto jarkurgan(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/26"));
+        sendPhoto.setCaption("XI–XII asrlarda qurilgan noyob minora. Spiral shaklli g‘ishtlari bilan O‘rta Osiyoda yagona me’moriy yodgorliklardan biri hisoblanadi.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto fayzullaxoja(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/27"));
+        sendPhoto.setCaption("Mahalliy avliyolardan biri Fayzulla Xo‘janing ziyoratgohi. Sokinzor hududda joylashgan, diniy va ma’naviy ahamiyati yuqori maskan.");
+        return sendPhoto;
+
+    }
+
+    // sirdaryo place
+    public static SendPhoto zarafshon(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/29"));
+        sendPhoto.setCaption("Navoiy viloyatidan oqib oʻtuvchi Zarafshon daryosining qirgʻoqlari boʻlib, bu yerda aholi va sayyohlar uchun dam olish maskanlari tashkil etilgan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto mirzaobod(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/30"));
+        sendPhoto.setCaption("Sirdaryo viloyatining Mirzaobod tumanida joylashgan yirik aholi punkti, Mirzachoʻlning dehqonchilik qilinadigan hududlaridan biri hisoblanadi.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto shirinsuv(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/31"));
+        sendPhoto.setCaption("Bu nom rasmiy maʼlumotlarda kam uchraydi, biroq Oʻzbekistondagi boshqa kichik sunʼiy koʻl yoki suv inshootlariga nisbatan qoʻllanilishi mumkin.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto boyovut(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/32"));
+        sendPhoto.setCaption("Sirdaryo viloyatidagi Boyovut tumanining maʼmuriy markazi hisoblanuvchi shahar tipidagi aholi punkti va unga tegishli yirik qishloq.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto sardobasuv(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/33"));
+        sendPhoto.setCaption("Sirdaryo viloyatida 2017-yilda qurilgan, ulkan sigʻimga ega suv inshooti boʻlib, asosan Mirzachoʻl yerlarini sugʻorish uchun moʻljallangan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto oqoltin(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/34"));
+        sendPhoto.setCaption("Oqoltin tumanining markaziy hududlaridan biri boʻlib, bu yerda asosan qishloq xoʻjaligi, xususan paxtachilik rivojlangan.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto xovos(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/35"));
+        sendPhoto.setCaption("Sirdaryo viloyati Xovos tumanida joylashgan va oʻzining qadimiy meʼmoriy uslubi yoki uzoq tarixi bilan mahalliy aholi uchun ahamiyatli boʻlgan masjid.");
+        return sendPhoto;
+
+    }
+
+    public static SendPhoto tuyabogiz(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/36"));
+        sendPhoto.setCaption("Rasmiy manbalar asosan Toshkent viloyatidagi Ohangaron daryosida joylashgan yirik Tuyaboʻgʻiz suv ombori (Toshkent dengizi)ni qayd etadi; togʻlar esa uning atrofidagi hududlarga tegishli boʻlishi mumkin.");
+        return sendPhoto;
+
+    }
 }
