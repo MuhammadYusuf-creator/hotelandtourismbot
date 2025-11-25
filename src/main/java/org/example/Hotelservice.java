@@ -610,7 +610,7 @@ public class Hotelservice {
     public SendMessage surxondaryo(long chatId){
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Surxondaryo (Termiz) mehmonxonalari:");
+        SM.setText("Surxondaryo mehmonxonalari:");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
@@ -663,7 +663,7 @@ public class Hotelservice {
     public SendMessage sirdaryo(long chatId){
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Sirdaryo viloyati (Guliston) mehmonxonalari:");
+        SM.setText("Sirdaryo viloyati mehmonxonalari:");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
@@ -769,7 +769,7 @@ public class Hotelservice {
     public SendMessage xorazm(long chatId){
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Xorazm (Xiva/Urganch) mehmonxonalari:");
+        SM.setText("Xorazm mehmonxonalari:");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
@@ -809,7 +809,7 @@ public class Hotelservice {
         // 5-mehmonxona: Orient Star Khiva Hotel (3*)
         List<InlineKeyboardButton> row5 = new ArrayList<>();
         InlineKeyboardButton b5 = new InlineKeyboardButton();
-        b5.setText("⭐️⭐️⭐️ Orient Star Khiva (Madrasa)");
+        b5.setText("⭐️⭐️⭐️ Orient Star Khiva");
         b5.setCallbackData("xorazm_orientstar");
         row5.add(b5);
         rowlist.add(row5);
