@@ -1210,7 +1210,7 @@ public class Tourismservice {
     }
 // viloyat tugad
 //samarqand placec
-    public static SendPhoto registon(long chatId) {
+    public static InlineKeyboardMarkup registon(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
         sendPhoto.setPhoto(new InputFile("https://t.me/hoteltoursimbotimages/2"));
@@ -1229,7 +1229,7 @@ public class Tourismservice {
         imk.setKeyboard(rowlist);
         sendPhoto.setReplyMarkup(imk);
 
-        return sendPhoto;
+        return imk;
 
 
     }
