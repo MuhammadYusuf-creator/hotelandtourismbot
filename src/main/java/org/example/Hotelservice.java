@@ -40,7 +40,33 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage menu(long chatId) {
+    public InlineKeyboardMarkup menu(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Bittasini tanlang ");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Hotel");
+        btn.setCallbackData("menuhotelId");
+        row.add(btn);
+        rowlist.add(row);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Tourism");
+        button.setCallbackData("menutourismId");
+        row.add(button);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return imk;
+    }
+
+    public SendMessage menu1(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Bittasini tanlang ");
@@ -65,8 +91,7 @@ public class Hotelservice {
         SM.setReplyMarkup(imk);
         return SM;
     }
-
-    public SendMessage shaharlarhotel(long chatId) {
+    public InlineKeyboardMarkup shaharlarhotel(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Qayerdagi mehmonhonalar kerak");
@@ -153,10 +178,10 @@ public class Hotelservice {
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
-        return SM;
+        return imk;
     }
 
-    public SendMessage toshkent(long chatId){
+    public InlineKeyboardMarkup toshkent(long chatId){
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Toshkentdagi mehmonxonalar. Quyidagi mehmonxonalardan birini tanlang:");
@@ -208,7 +233,7 @@ public class Hotelservice {
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
-        return SM;
+        return imk;
     }
 
     public SendMessage andijon(long chatId){

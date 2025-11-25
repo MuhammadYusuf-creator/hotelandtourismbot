@@ -1,6 +1,8 @@
 package org.example;
 
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageReplyMarkup;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -30,28 +32,65 @@ public class myBot extends TelegramLongPollingBot {
             CallbackQuery callbackQuery = update.getCallbackQuery();
             String data = callbackQuery.getData();
             Long chatId = callbackQuery.getMessage().getChatId();
+            Integer messageId = callbackQuery.getMessage().getMessageId();
 
             System.out.println(data);
 
             if (data.equals("ozbekId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+
+                editMessageReplyMarkup.setReplyMarkup(hotel.menu(chatId));
+
                 try {
-                    execute(hotel.menu(chatId));
+                    execute(editMessageReplyMarkup);
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
 
             if (data.equals("menuhotelId")) {
+
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Shaharlarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.shaharlarhotel(chatId));
+
                 try {
-                    execute(hotel.shaharlarhotel(chatId));
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("toshkentId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.toshkent(chatId));
+
+                try {
+                    execute(editMessageText);
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
             }
 
             if (data.equals("menutourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Shaharlarni tanlang");
+
+                editMessageText.setReplyMarkup(tourism.shaharlartourism(chatId));
+
                 try {
-                    execute(tourism.shaharlartourism(chatId));
+                    execute(editMessageText);
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -949,7 +988,7 @@ public class myBot extends TelegramLongPollingBot {
 
             if (data.equals("ortgaId")) {
                 try {
-                    execute(tourism.shaharlartourism(chatId));
+                    execute(tourism.shaharlartourism1(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -957,7 +996,7 @@ public class myBot extends TelegramLongPollingBot {
 
             if (data.equals("ortgabigId")) {
                 try {
-                    execute(hotel.menu(chatId));
+                    execute(hotel.menu1(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
@@ -1058,6 +1097,7 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
 
 
 
