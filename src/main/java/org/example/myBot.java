@@ -153,8 +153,15 @@ public class myBot extends TelegramLongPollingBot {
             }
 
             if (data.equals("SamarqandtourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("samarqandni qaayerini aylanmoqchisiz");
+
+                editMessageText.setReplyMarkup(tourism.samarqand1(chatId));
+
                 try {
-                    execute(tourism.samarqand(chatId));
+                    execute(editMessageText);
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }

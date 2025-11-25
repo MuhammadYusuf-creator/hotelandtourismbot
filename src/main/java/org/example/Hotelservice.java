@@ -385,7 +385,7 @@ public class Hotelservice {
         // 5-mehmonxona: Mehmonxona Jizzax (3*)
         List<InlineKeyboardButton> row5 = new ArrayList<>();
         InlineKeyboardButton b5 = new InlineKeyboardButton();
-        b5.setText("⭐️⭐️⭐️ Mehmonxona Jizzax");
+        b5.setText("⭐️⭐️⭐️ Tashkent plaza in jizzax");
         b5.setCallbackData("jizzax_markaziy");
         row5.add(b5);
         rowlist.add(row5);
@@ -398,7 +398,7 @@ public class Hotelservice {
     public SendMessage qashqadaryo(long chatId){
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
-        SM.setText("Qashqadaryo (Qarshi/Shahrisabz) mehmonxonalari:");
+        SM.setText("Qashqadaryo mehmonxonalari:");
 
         InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
@@ -414,7 +414,7 @@ public class Hotelservice {
         // 2-mehmonxona: Nasaf Hotel (Qarshi) (5*)
         InlineKeyboardButton b2 = new InlineKeyboardButton();
         List<InlineKeyboardButton> row2 = new ArrayList<>();
-        b2.setText("⭐️⭐️⭐️⭐️⭐️ Nasaf Hotel (Qarshi)");
+        b2.setText("⭐️⭐️⭐️⭐️⭐️ Nasaf Hotel");
         b2.setCallbackData("qashqadaryo_nasaf");
         row2.add(b2);
         rowlist.add(row2);
@@ -422,7 +422,7 @@ public class Hotelservice {
         // 3-mehmonxona: Bahrin Qarshi Hotel (4*)
         List<InlineKeyboardButton> row3 = new ArrayList<>();
         InlineKeyboardButton b3 = new InlineKeyboardButton();
-        b3.setText("⭐️⭐️⭐️⭐️ Bahrin Qarshi Hotel");
+        b3.setText("⭐️⭐️⭐️⭐️ Sultan hotel");
         b3.setCallbackData("qashqadaryo_bahrin");
         row3.add(b3);
         rowlist.add(row3);

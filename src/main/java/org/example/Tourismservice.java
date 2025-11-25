@@ -287,7 +287,7 @@ public class Tourismservice {
         sendMessage.setReplyMarkup(imk);
         return sendMessage;
     }
-    public static SendMessage samarqand1(Long chatId) {
+    public static InlineKeyboardMarkup samarqand1(Long chatId) {
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(chatId);
         sendMessage.setText("samarqandni qaayerini aylanmoqchisiz");
@@ -362,7 +362,7 @@ public class Tourismservice {
 
         imk.setKeyboard(rowlist);
         sendMessage.setReplyMarkup(imk);
-        return sendMessage;
+        return imk;
     }
 
     public static SendMessage qashqadaryo(Long chatId) {
