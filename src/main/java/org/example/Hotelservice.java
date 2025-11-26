@@ -66,7 +66,7 @@ public class Hotelservice {
         return imk;
     }
 
-    public SendMessage menu1(long chatId) {
+    public InlineKeyboardMarkup menu1(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Bittasini tanlang ");
@@ -89,7 +89,7 @@ public class Hotelservice {
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
-        return SM;
+        return imk;
     }
     public InlineKeyboardMarkup shaharlarhotel(long chatId) {
         SendMessage SM = new SendMessage();
