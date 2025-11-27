@@ -95,6 +95,141 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
+            if (data.equals("andijonId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.andijon1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("buxoroId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.buxoro1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("qashqadaryoId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.qashqadaryo1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("navoiyId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.navoiy1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("namanganId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.namangan1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("SamarqandId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.samarqand1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("surxondaryoId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.surxondaryo1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("fargonaId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.fargona1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("xorazmId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Hotellarni tanlang");
+
+                editMessageText.setReplyMarkup(hotel.xorazm1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             if (data.equals("menutourismId")) {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
