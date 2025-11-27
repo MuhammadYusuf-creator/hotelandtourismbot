@@ -12,6 +12,7 @@ public class myBot extends TelegramLongPollingBot {
     Hotelservice hotel = new Hotelservice();
     Tourismservice tourism = new Tourismservice();
 
+
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -41,6 +42,20 @@ public class myBot extends TelegramLongPollingBot {
                 editMessageReplyMarkup.setChatId(chatId);
                 editMessageReplyMarkup.setMessageId(messageId);
                 editMessageReplyMarkup.setReplyMarkup(hotel.menu(chatId));
+
+                try {
+                    execute(editMessageReplyMarkup);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("englishId")) {
+                EditMessageReplyMarkup editMessageReplyMarkup = new EditMessageReplyMarkup();
+                editMessageReplyMarkup.setChatId(chatId);
+                editMessageReplyMarkup.setMessageId(messageId);
+//                editMessageReplyMarkup.setInlineMessageId("choose one");
+                editMessageReplyMarkup.setReplyMarkup(hotel.engmenu(chatId));
 
                 try {
                     execute(editMessageReplyMarkup);
@@ -94,6 +109,23 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+
+            if (data.equals("engmenutourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Choose cities");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engshaharlartourism(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
 
             if (data.equals("toshkenttourismId")) {
                 EditMessageText editMessageText = new EditMessageText();
@@ -269,6 +301,187 @@ public class myBot extends TelegramLongPollingBot {
                 editMessageText.setText("xorazmni qayerini aylanmoqchisiz");
 
                 editMessageText.setReplyMarkup(tourism.xorazm1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //viloyat end uzb
+            //viloyat start eng
+            if (data.equals("engtoshkenttourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Tashkent?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engtoshkent1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engandijontourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Andijan?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engandijon1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engbuxorotourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Bukhara?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engbuxoro1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engjizzaxtourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in JIzzakh?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engjizzax1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engqashqadaryotourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Kashkadarya?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engqashqadaryo1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnavoiytourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Navoi?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engnavoiy1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnamangantourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Namangan?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.enggnamangan1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsamarqandtourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Samarkand?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engsamarqand1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsurxondaryotourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Surkhandarya?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engsurxandaryo1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsirdaryoourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in SyrDarya?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engsirdaryo1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engfargonatourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Fergana?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engfargona1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engxorazmtourismId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Where do you want to visit in Khorezm?");
+
+                editMessageText.setReplyMarkup(TorismServiceEng.engxorazm1(chatId));
 
                 try {
                     execute(editMessageText);
@@ -1106,6 +1319,21 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
+            if (data.equals("engortgabigId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Choose one");
+
+                editMessageText.setReplyMarkup(hotel.engmenu1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
             if (data.equals("ortgasamarqandId")) {
                 try {
                     execute(tourism.samarqand(chatId));
@@ -1197,6 +1425,119 @@ public class myBot extends TelegramLongPollingBot {
             if (data.equals("ortgajizzaxId")) {
                 try {
                     execute(tourism.jizzax(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            //eng start
+            if (data.equals("engortgabigId")) {
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Bittasini tanlang");
+
+                editMessageText.setReplyMarkup(hotel.engmenu1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+            if (data.equals("engortgasamarqandId")) {
+                try {
+                    execute(TorismServiceEng.engsamarqand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgaqashqadaryoId")) {
+                try {
+                    execute(TorismServiceEng.engqashqadaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgasurxandaryoId")) {
+                try {
+                    execute(TorismServiceEng.engsurxandaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgasirdaryoId")) {
+                try {
+                    execute(TorismServiceEng.engsirdaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgafargonaId")) {
+                try {
+                    execute(TorismServiceEng.engfargona(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgaxorazmId")) {
+                try {
+                    execute(TorismServiceEng.engxorazm(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortganamanganId")) {
+                try {
+                    execute(TorismServiceEng.engnamangan(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgabuxoroId")) {
+                try {
+                    execute(TorismServiceEng.engbuxoro(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortganavoiyId")) {
+                try {
+                    execute(TorismServiceEng.engnavoiy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgaandijonId")) {
+                try {
+                    execute(TorismServiceEng.engandijon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgatoshkentId")) {
+                try {
+                    execute(TorismServiceEng.engtoshkent(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engortgajizzaxId")) {
+                try {
+                    execute(TorismServiceEng.engjizzax(chatId));
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
