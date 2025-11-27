@@ -1,6 +1,8 @@
 package org.example;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
@@ -24,10 +26,6 @@ public class Hotelservice {
         row.add(btn);
         rowlist.add(row);
 
-        InlineKeyboardButton button = new InlineKeyboardButton();
-        button.setText("🇷🇺Russian");
-        button.setCallbackData("rusId");
-        row.add(button);
 
         InlineKeyboardButton button1 = new InlineKeyboardButton();
         button1.setText("🇺🇸English");
@@ -91,6 +89,7 @@ public class Hotelservice {
         SM.setReplyMarkup(imk);
         return SM;
     }
+
     public InlineKeyboardMarkup shaharlarhotel(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
@@ -181,7 +180,7 @@ public class Hotelservice {
         return imk;
     }
 
-    public InlineKeyboardMarkup toshkent(long chatId){
+    public InlineKeyboardMarkup toshkent(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Toshkentdagi mehmonxonalar. Quyidagi mehmonxonalardan birini tanlang:");
@@ -236,7 +235,7 @@ public class Hotelservice {
         return imk;
     }
 
-    public SendMessage andijon(long chatId){
+    public SendMessage andijon(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Andijon viloyati mehmonxonalari:");
@@ -289,7 +288,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage buxoro(long chatId){
+    public SendMessage buxoro(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Buxorodagi mehmonxonalar:");
@@ -342,7 +341,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage jizzax(long chatId){
+    public SendMessage jizzax(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Jizzax viloyati mehmonxonalari:");
@@ -395,7 +394,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage qashqadaryo(long chatId){
+    public SendMessage qashqadaryo(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Qashqadaryo mehmonxonalari:");
@@ -448,7 +447,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage navoiy(long chatId){
+    public SendMessage navoiy(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Navoiy viloyati mehmonxonalari:");
@@ -501,7 +500,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage namangan(long chatId){
+    public SendMessage namangan(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Namangan viloyati mehmonxonalari:");
@@ -554,7 +553,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage samarqand(long chatId){
+    public SendMessage samarqand(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Samarqanddagi mehmonxonalar:");
@@ -607,7 +606,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage surxondaryo(long chatId){
+    public SendMessage surxondaryo(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Surxondaryo mehmonxonalari:");
@@ -660,7 +659,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage sirdaryo(long chatId){
+    public SendMessage sirdaryo(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Sirdaryo viloyati mehmonxonalari:");
@@ -713,7 +712,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage fargona(long chatId){
+    public SendMessage fargona(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Farg'ona viloyati mehmonxonalari:");
@@ -766,7 +765,7 @@ public class Hotelservice {
         return SM;
     }
 
-    public SendMessage xorazm(long chatId){
+    public SendMessage xorazm(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
         SM.setText("Xorazm mehmonxonalari:");
@@ -819,4 +818,140 @@ public class Hotelservice {
         return SM;
     }
 
+
+    //tashkent hotels
+    public static SendPhoto hilton(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/16")); // Rasm URL/ID
+        sendPhoto.setCaption(
+                "🏢 **Hilton Tashkent City** ⭐️⭐️⭐️⭐️⭐️" +
+                        "\n\n**Afzalliklar:** " +
+                        "Markaziy joylashuv, zamonaviy dizayn, hashamatli yopiq basseyn, spa markazi va shahar manzarali Pan-Osiyo tomidagi restoran mavjud. Biznes sayohatlar va dam olish uchun ideal." +
+                        "\n**Narxi:** 300$" +
+                        "\n**Lokatsiya:** 1, Ukchi Street, Tashkent"
+        );
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("⬅️ Orqaga");
+        b1.setCallbackData("ortgatoshkent");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        imk.setKeyboard(rowlist);
+        sendPhoto.setReplyMarkup(imk);
+        return sendPhoto;
+    }
+
+    public static SendPhoto hyattRegency(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/17"));
+        sendPhoto.setCaption(
+                "🏢 **Hyatt Regency Tashkent** ⭐️⭐️⭐️⭐️⭐️" +
+                        "\n\n**Afzalliklar:** " +
+                        "Besh yulduzli xizmat, Registon maydoniga yaqin, yopiq basseyn, to'liq xizmat ko'rsatuvchi spa va bir nechta ovqatlanish joylari. Biznes markazlarga qulay." +
+                        "\n**Narxi:** 280$" +
+                        "\n**Lokatsiya:** Navoiy ko'chasi 1A, Tashkent"
+        );
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("⬅️ Orqaga");
+        b1.setCallbackData("ortgatoshkent");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        imk.setKeyboard(rowlist);
+        sendPhoto.setReplyMarkup(imk);
+        return sendPhoto;
+    }
+
+    public static SendPhoto wyndhamTashkent(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/18"));
+        sendPhoto.setCaption(
+                "🏢 **Wyndham Tashkent** ⭐️⭐️⭐️⭐️" +
+                        "\n\n**Afzalliklar:** " +
+                        "Chorsu bozoriga yaqin, ochiq basseyn, sauna va fitnes markazi. Klassik interyer va sifatli xizmat ko'rsatish. Turistik joylarga oson yetib borish mumkin." +
+                        "\n**Narxi:** 160$" +
+                        "\n**Lokatsiya:** Amir Temur ko'chasi 7/8, Tashkent"
+        );
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("⬅️ Orqaga");
+        b1.setCallbackData("ortgatoshkent");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        imk.setKeyboard(rowlist);
+        sendPhoto.setReplyMarkup(imk);
+        return sendPhoto;
+    }
+
+    public static SendPhoto courtyardMarriott(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/19"));
+        sendPhoto.setCaption(
+                "🏢 **Courtyard by Marriott Tashkent** ⭐️⭐️⭐️⭐️" +
+                        "\n\n**Afzalliklar:** " +
+                        "Marriott sifat standarti, yopiq basseyn va zamonaviy fitnes markazi. Aeroportga yaqin joylashuv va biznes xizmatlarining yuqoriligi." +
+                        "\n**Narxi:** 180$" +
+                        "\n**Lokatsiya:** Kichik Xalqa yo'li ko'chasi 70A, Tashkent"
+        );
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("⬅️ Orqaga");
+        b1.setCallbackData("ortgatoshkent");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        imk.setKeyboard(rowlist);
+        sendPhoto.setReplyMarkup(imk);
+        return sendPhoto;
+    }
+
+    public static SendPhoto levelHotel(long chatId) {
+        SendPhoto sendPhoto = new SendPhoto();
+        sendPhoto.setChatId(chatId);
+        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/20"));
+        sendPhoto.setCaption(
+                "🏢 **Level Hotel and BC** ⭐️⭐️⭐️" +
+                        "\n\n**Afzalliklar:** " +
+                        "Qulay narxda sifatli xizmat. Zamonaviy xonalar, biznes markaz bilan birlashganligi. Metro bekatiga yaqin. Shahar markazida joylashgan." +
+                        "\n**Narxi: 90$" +
+                        "\n**Lokatsiya:** Shahrisabz ko'chasi, Tashkent"
+        );
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+
+        InlineKeyboardButton b1 = new InlineKeyboardButton();
+        b1.setText("⬅️ Orqaga");
+        b1.setCallbackData("ortgatoshkent");
+        row1.add(b1);
+        rowlist.add(row1);
+
+        imk.setKeyboard(rowlist);
+        sendPhoto.setReplyMarkup(imk);
+        return sendPhoto;
+    }
 }
