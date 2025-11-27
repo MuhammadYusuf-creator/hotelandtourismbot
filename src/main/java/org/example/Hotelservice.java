@@ -38,6 +38,33 @@ public class Hotelservice {
         return SM;
     }
 
+
+    public InlineKeyboardMarkup intro1(Long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Assalomu alaykum Iltimos tilni tanlang");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("🇺🇿O'zbekcha");
+        btn.setCallbackData("ozbekId");
+        row.add(btn);
+        rowlist.add(row);
+
+        InlineKeyboardButton button1 = new InlineKeyboardButton();
+        button1.setText("🇺🇸English");
+        button1.setCallbackData("englishId");
+        row.add(button1);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return imk;
+    }
+
     public InlineKeyboardMarkup menu(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
@@ -82,6 +109,58 @@ public class Hotelservice {
         InlineKeyboardButton button = new InlineKeyboardButton();
         button.setText("Tourism");
         button.setCallbackData("menutourismId");
+        row.add(button);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return imk;
+    }
+
+    public InlineKeyboardMarkup engmenu(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Choose one ");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Hotel");
+        btn.setCallbackData("engmenuhotelId");
+        row.add(btn);
+        rowlist.add(row);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Tourism");
+        button.setCallbackData("engmenutourismId");
+        row.add(button);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return imk;
+    }
+
+    public InlineKeyboardMarkup engmenu1(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("choose one ");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Hotel");
+        btn.setCallbackData("engmenuhotelId");
+        row.add(btn);
+        rowlist.add(row);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Tourism");
+        button.setCallbackData("engmenutourismId");
         row.add(button);
 
 
