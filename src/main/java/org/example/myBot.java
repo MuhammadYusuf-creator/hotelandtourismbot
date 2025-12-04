@@ -1266,7 +1266,7 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
-            if (data.equals("engsamarqandtourismId")) {
+            if (data.equals("engSamarqandtourismId")) {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
@@ -2184,6 +2184,13 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            if (data.equals("engortgaId")) {
+                try {
+                    execute(TorismServiceEng.engshaharlartourism1(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
             if (data.equals("ortgasamarqandId")) {
                 try {
@@ -2394,9 +2401,786 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
+//viloyat end desripption start
+            //samarqand str
+            if (data.equals("engregistonId")) {
+                try {
+                    execute(TorismServiceEng.engregiston(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (data.equals("engshohizindaId")) {
+                try {
+                    execute(TorismServiceEng.engshohizinda(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
+            if (data.equals("engguriamirId")) {
+                try {
+                    execute(TorismServiceEng.enggoriamir(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
+            if (data.equals("engbibixonimId")) {
+                try {
+                    execute(TorismServiceEng.engbibixonim(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
 
+            if (data.equals("engulugbekrasadxonaId")) {
+                try {
+                    execute(TorismServiceEng.engulugbekras(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engafrosiyobmuzeyId")) {
+                try {
+                    execute(TorismServiceEng.engafrosiyob(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("enghazratixizrId")) {
+                try {
+                    execute(TorismServiceEng.enghazratihizr(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsiyobbozorId")) {
+                try {
+                    execute(TorismServiceEng.engsiyob(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //samarqand end
+            //qashqadaryo start
+            if (data.equals("engkitobgeologiyaId")) {
+                try {
+                    execute(TorismServiceEng.engkquriqxona(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engoqsaroyId")) {
+                try {
+                    execute(TorismServiceEng.engoqsaroy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engdoruttilovatId")) {
+                try {
+                    execute(TorismServiceEng.engdorut(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engdorussaodatId")) {
+                try {
+                    execute(TorismServiceEng.engdorus(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("enghazratibashirId")) {
+                try {
+                    execute(TorismServiceEng.engbashr(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engqarshiregistanId")) {
+                try {
+                    execute(TorismServiceEng.engqregiston(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("englangarotaId")) {
+                try {
+                    execute(TorismServiceEng.englanagrota(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engkitobobservatoriyaId")) {
+                try {
+                    execute(TorismServiceEng.engkastronimik(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //qashqadaryo end
+            //surxandaryo str
+            if (data.equals("engfayoztepaId")) {
+                try {
+                    execute(TorismServiceEng.engfayoztepa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engkampirtepaId")) {
+                try {
+                    execute(TorismServiceEng.engkampirtepa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engalhakimtermiziId")) {
+                try {
+                    execute(TorismServiceEng.engalhakim(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsayrobId")) {
+                try {
+                    execute(TorismServiceEng.engsayrob(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engdarbandId")) {
+                try {
+                    execute(TorismServiceEng.engdarband(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engqumtepaId")) {
+                try {
+                    execute(TorismServiceEng.engqumtepa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engminorasiId")) {
+                try {
+                    execute(TorismServiceEng.engjarkurgan(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engfayzullaxujaId")) {
+                try {
+                    execute(TorismServiceEng.engfayzullaxoja(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //surxandaryo end
+            //sirdaryo str
+            if (data.equals("engzarafshonsohilId")) {
+                try {
+                    execute(TorismServiceEng.engzarafshon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engmirzaobodId")) {
+                try {
+                    execute(TorismServiceEng.engmirzaobod(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engshirinsuvomboriId")) {
+                try {
+                    execute(TorismServiceEng.engshirinsuv(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engboyovutId")) {
+                try {
+                    execute(TorismServiceEng.engboyovut(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsardobaomboriId")) {
+                try {
+                    execute(TorismServiceEng.engsardobasuv(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engoqoltinId")) {
+                try {
+                    execute(TorismServiceEng.engoqoltin(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engxovostarixmasjidId")) {
+                try {
+                    execute(TorismServiceEng.engxovos(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engtuyabugiztogId")) {
+                try {
+                    execute(TorismServiceEng.engtuyabogiz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //sirdaryo end
+            //fargona str
+            if (data.equals("engxonsaroyiId")) {
+                try {
+                    execute(TorismServiceEng.engxonsaroyi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnorbutabiymadrasaId")) {
+                try {
+                    execute(TorismServiceEng.engnorbutabiy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engipakmuzeyId")) {
+                try {
+                    execute(TorismServiceEng.engipakmuzey(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engkulolchilikId")) {
+                try {
+                    execute(TorismServiceEng.engkulolchilik(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engfargonabotanikaId")) {
+                try {
+                    execute(TorismServiceEng.engfarbotanika(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engtarixiybinolarId")) {
+                try {
+                    execute(TorismServiceEng.engbuvaydat(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engqadimiyollarId")) {
+                try {
+                    execute(TorismServiceEng.engsuxqadimiy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engoqtepaziyoratId")) {
+                try {
+                    execute(TorismServiceEng.engoqtepaziyorat(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //fargona end
+            //xorazm str
+            if (data.equals("engichanqalaId")) {
+                try {
+                    execute(TorismServiceEng.engichanqala(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engkaltaminorId")) {
+                try {
+                    execute(TorismServiceEng.engkaltaminor(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engpakhlavanmahmudId")) {
+                try {
+                    execute(TorismServiceEng.engpahlavonmahmud(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engjumamasjidiId")) {
+                try {
+                    execute(TorismServiceEng.engjumamasjidi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("enghazratipahlavonId")) {
+                try {
+                    execute(TorismServiceEng.enghazratipahlavon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engxorazmmuzeyId")) {
+                try {
+                    execute(TorismServiceEng.engxmuzeyi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engtoshhovliId")) {
+                try {
+                    execute(TorismServiceEng.engtoshhovli(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engislamxojaId")) {
+                try {
+                    execute(TorismServiceEng.engislomxoja(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //xorazm end
+            //namangan str
+            if (data.equals("engchortoqsanatoriyaId")) {
+                try {
+                    execute(TorismServiceEng.engchortoq(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engchustdoppiId")) {
+                try {
+                    execute(TorismServiceEng.engchustdoppi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engboburboginamanganId")) {
+                try {
+                    execute(TorismServiceEng.engboburbog(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engaxsikentId")) {
+                try {
+                    execute(TorismServiceEng.engaksikent(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engqoradaryosohilId")) {
+                try {
+                    execute(TorismServiceEng.engqoradaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnorindamId")) {
+                try {
+                    execute(TorismServiceEng.engdamak(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsurxontepaId")) {
+                try {
+                    execute(TorismServiceEng.engsurxontepa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engurxontogId")) {
+                try {
+                    execute(TorismServiceEng.engurxontog(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            // namangan end
+            //buxoro str
+            if (data.equals("engarkqalaId")) {
+                try {
+                    execute(TorismServiceEng.engarkqala(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engpoikolonId")) {
+                try {
+                    execute(TorismServiceEng.engpoikalon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("englabihovuzId")) {
+                try {
+                    execute(TorismServiceEng.englabihovuz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engbolohauzId")) {
+                try {
+                    execute(TorismServiceEng.engbolohauz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsitoraimohixossaId")) {
+                try {
+                    execute(TorismServiceEng.engsitoramohi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engchashmaiayubId")) {
+                try {
+                    execute(TorismServiceEng.engchashmai(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engchorbakrId")) {
+                try {
+                    execute(TorismServiceEng.engchorbakr(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnaqshbandId")) {
+                try {
+                    execute(TorismServiceEng.engbahouddin(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //bbuxoro end
+            //navoi start
+            if (data.equals("engsarmishsoyId")) {
+                try {
+                    execute(TorismServiceEng.engsarmishsoy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engmirsaidbahromId")) {
+                try {
+                    execute(TorismServiceEng.engmirsaid(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engabdullaxonbandiId")) {
+                try {
+                    execute(TorismServiceEng.engabdullaqalasi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engqiziltepaId")) {
+                try {
+                    execute(TorismServiceEng.engqiziltepa(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engrabotimalikId")) {
+                try {
+                    execute(TorismServiceEng.engrabotimalik(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engchashmamajmuaId")) {
+                try {
+                    execute(TorismServiceEng.engnchashma(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnurotaqalaId")) {
+                try {
+                    execute(TorismServiceEng.engnurotaqala(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engaydorkulId")) {
+                try {
+                    execute(TorismServiceEng.engaydarkol(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //navoi end
+            //andijon str
+            if (data.equals("engboburbogiandijonId")) {
+                try {
+                    execute(TorismServiceEng.engaboburbogi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engjomemasjidiandijonId")) {
+                try {
+                    execute(TorismServiceEng.engajomemasjidi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engboburmemorialId")) {
+                try {
+                    execute(TorismServiceEng.engboburmemorial(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engandijonqalaId")) {
+                try {
+                    execute(TorismServiceEng.engandijonqala(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("enggmuzbekistanId")) {
+                try {
+                    execute(TorismServiceEng.enggmuzb(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engandijonsoyId")) {
+                try {
+                    execute(TorismServiceEng.engandijonsoy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engxonobodId")) {
+                try {
+                    execute(TorismServiceEng.engxonobod(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engshahrixonsoyId")) {
+                try {
+                    execute(TorismServiceEng.engshahrixonsoy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //andijon end
+            //toshkent str
+            if (data.equals("engamirsoyId")) {
+                try {
+                    execute(TorismServiceEng.engamirsoy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engcharvakId")) {
+                try {
+                    execute(TorismServiceEng.engchorvoq(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engchimganId")) {
+                try {
+                    execute(TorismServiceEng.engchimyon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engbeldersoyId")) {
+                try {
+                    execute(TorismServiceEng.engbildirsoy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("enggofurgulomId")) {
+                try {
+                    execute(TorismServiceEng.enggofurgulom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engsolariqId")) {
+                try {
+                    execute(TorismServiceEng.engsolariq(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engkumushkonId")) {
+                try {
+                    execute(TorismServiceEng.engkumushkon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engmenvalleyId")) {
+                try {
+                    execute(TorismServiceEng.engmenvalley(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //toshkent end
+            //jizzax str
+            if (data.equals("engzominmilliybogiId")) {
+                try {
+                    execute(TorismServiceEng.engzominmilliybog(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engzominsanatoriyaId")) {
+                try {
+                    execute(TorismServiceEng.engzominsanatoriya(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engoromId")) {
+                try {
+                    execute(TorismServiceEng.engorom(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engforishtogId")) {
+                try {
+                    execute(TorismServiceEng.engforish(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engarnasoykulId")) {
+                try {
+                    execute(TorismServiceEng.engarnasoy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engurmonxujaligiId")) {
+                try {
+                    execute(TorismServiceEng.engormanxojaligi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engnurafshonmasjidId")) {
+                try {
+                    execute(TorismServiceEng.engnurafshonmasjid(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("engobirahmatgoriId")) {
+                try {
+                    execute(TorismServiceEng.engobirahmatgori(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            //jizzax end
         }
 
     }
