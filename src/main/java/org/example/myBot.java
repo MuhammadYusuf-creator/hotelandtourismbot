@@ -947,6 +947,14 @@ public class myBot extends TelegramLongPollingBot {
                 }
             }
 
+            if (data.equals("orqagashaharlar")) {
+                try {
+                    execute(hotel.menu3(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
 
             if (data.equals("menutourismId")) {
                 EditMessageText editMessageText = new EditMessageText();

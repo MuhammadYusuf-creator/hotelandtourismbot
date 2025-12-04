@@ -117,6 +117,32 @@ public class Hotelservice {
         return imk;
     }
 
+    public SendMessage menu3(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Bittasini tanlang ");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Hotel");
+        btn.setCallbackData("menuhotelId");
+        row.add(btn);
+        rowlist.add(row);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Tourism");
+        button.setCallbackData("menutourismId");
+        row.add(button);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return SM;
+    }
+
     public InlineKeyboardMarkup engmenu(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
@@ -253,6 +279,13 @@ public class Hotelservice {
         row6.add(btn10);
         rowlist.add(row6);
 
+        List<InlineKeyboardButton> row7 = new ArrayList<>();
+        InlineKeyboardButton b11 = new InlineKeyboardButton();
+        b11.setText("⬅️orqaga");
+        b11.setCallbackData("orqagashaharlar");
+        row7.add(b11);
+        rowlist.add(row7);
+
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -342,6 +375,13 @@ public class Hotelservice {
         btn10.setCallbackData("xorazmId");
         row6.add(btn10);
         rowlist.add(row6);
+
+        List<InlineKeyboardButton> row7 = new ArrayList<>();
+        InlineKeyboardButton b11 = new InlineKeyboardButton();
+        b11.setText("⬅️orqaga");
+        b11.setCallbackData("orqagashaharlar");
+        row7.add(b11);
+        rowlist.add(row7);
 
 
         imk.setKeyboard(rowlist);
