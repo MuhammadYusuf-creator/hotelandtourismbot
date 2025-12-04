@@ -259,6 +259,96 @@ public class Hotelservice {
         return imk;
     }
 
+    public SendMessage shaharlarhotel1(long chatId) {
+        SendMessage SM = new SendMessage();
+        SM.setChatId(chatId);
+        SM.setText("Qayerdagi mehmonhonalar kerak");
+
+        InlineKeyboardMarkup imk = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowlist = new ArrayList<>();
+
+        List<InlineKeyboardButton> row = new ArrayList<>();
+        InlineKeyboardButton btn = new InlineKeyboardButton();
+        btn.setText("Toshkent");
+        btn.setCallbackData("toshkentId");
+        row.add(btn);
+
+        InlineKeyboardButton button = new InlineKeyboardButton();
+        button.setText("Andijon");
+        button.setCallbackData("andijonId");
+        row.add(button);
+        rowlist.add(row);
+
+
+        List<InlineKeyboardButton> row1 = new ArrayList<>();
+        InlineKeyboardButton btn1 = new InlineKeyboardButton();
+        btn1.setText("Buxoro");
+        btn1.setCallbackData("buxoroId");
+        row1.add(btn1);
+
+        InlineKeyboardButton btn2 = new InlineKeyboardButton();
+        btn2.setText("Jizzax");
+        btn2.setCallbackData("jizzaxId");
+        row1.add(btn2);
+        rowlist.add(row1);
+
+
+        List<InlineKeyboardButton> row3 = new ArrayList<>();
+        InlineKeyboardButton btn3 = new InlineKeyboardButton();
+        btn3.setText("Qashqadaryo");
+        btn3.setCallbackData("qashqadaryoId");
+        row3.add(btn3);
+
+        InlineKeyboardButton btn4 = new InlineKeyboardButton();
+        btn4.setText("Navoiy");
+        btn4.setCallbackData("navoiyId");
+        row3.add(btn4);
+        rowlist.add(row3);
+
+
+        List<InlineKeyboardButton> row4 = new ArrayList<>();
+        InlineKeyboardButton btn5 = new InlineKeyboardButton();
+        btn5.setText("Namangan");
+        btn5.setCallbackData("namanganId");
+        row4.add(btn5);
+
+        InlineKeyboardButton btn6 = new InlineKeyboardButton();
+        btn6.setText("Samarqand");
+        btn6.setCallbackData("SamarqandId");
+        row4.add(btn6);
+        rowlist.add(row4);
+
+        List<InlineKeyboardButton> row5 = new ArrayList<>();
+        InlineKeyboardButton btn7 = new InlineKeyboardButton();
+        btn7.setText("Surxondaryo");
+        btn7.setCallbackData("surxondaryoId");
+        row5.add(btn7);
+
+        InlineKeyboardButton btn8 = new InlineKeyboardButton();
+        btn8.setText("Sirdaryo");
+        btn8.setCallbackData("sirdaryoId");
+        row5.add(btn8);
+        rowlist.add(row5);
+
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton btn9 = new InlineKeyboardButton();
+        btn9.setText("Farg'ona");
+        btn9.setCallbackData("fargonaId");
+        row6.add(btn9);
+
+        InlineKeyboardButton btn10 = new InlineKeyboardButton();
+        btn10.setText("Xorazm");
+        btn10.setCallbackData("xorazmId");
+        row6.add(btn10);
+        rowlist.add(row6);
+
+
+        imk.setKeyboard(rowlist);
+        SM.setReplyMarkup(imk);
+        return SM;
+    }
+
     public InlineKeyboardMarkup toshkent(long chatId) {
         SendMessage SM = new SendMessage();
         SM.setChatId(chatId);
@@ -307,6 +397,15 @@ public class Hotelservice {
         b5.setCallbackData("tashkent_level");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
+
 
 
         imk.setKeyboard(rowlist);
@@ -363,6 +462,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -417,6 +523,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -469,6 +582,13 @@ public class Hotelservice {
         b5.setCallbackData("andijon_hamkor");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -523,6 +643,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -575,6 +702,13 @@ public class Hotelservice {
         b5.setCallbackData("buxoro_sasha");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -629,6 +763,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -681,6 +822,13 @@ public class Hotelservice {
         b5.setCallbackData("jizzax_markaziy");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -735,6 +883,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -787,6 +942,13 @@ public class Hotelservice {
         b5.setCallbackData("qashqadaryo_muborak");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -841,6 +1003,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -893,6 +1062,13 @@ public class Hotelservice {
         b5.setCallbackData("navoiy_city");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -947,6 +1123,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -999,6 +1182,13 @@ public class Hotelservice {
         b5.setCallbackData("namangan_fajr");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -1053,6 +1243,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -1105,6 +1302,13 @@ public class Hotelservice {
         b5.setCallbackData("samarqand_malika");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -1159,6 +1363,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -1211,6 +1422,13 @@ public class Hotelservice {
         b5.setCallbackData("surxondaryo_markaziy");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -1265,6 +1483,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -1317,6 +1542,13 @@ public class Hotelservice {
         b5.setCallbackData("sirdaryo_ideal");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -1371,6 +1603,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -1423,6 +1662,13 @@ public class Hotelservice {
         b5.setCallbackData("fargona_voyage");
         row5.add(b5);
         rowlist.add(row5);
+
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
 
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
@@ -1477,6 +1723,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return SM;
@@ -1530,6 +1783,13 @@ public class Hotelservice {
         row5.add(b5);
         rowlist.add(row5);
 
+        List<InlineKeyboardButton> row6 = new ArrayList<>();
+        InlineKeyboardButton b6 = new InlineKeyboardButton();
+        b6.setText("⬅️orqaga");
+        b6.setCallbackData("orqagamenu");
+        row6.add(b6);
+        rowlist.add(row6);
+
         imk.setKeyboard(rowlist);
         SM.setReplyMarkup(imk);
         return imk;
@@ -1540,7 +1800,7 @@ public class Hotelservice {
     public static SendPhoto hilton(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/16")); // Rasm URL/ID
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/16")); // Rasm URL/ID
         sendPhoto.setCaption(
                 "🏢Hilton Tashkent City ⭐️⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1567,7 +1827,7 @@ public class Hotelservice {
     public static SendPhoto hyattRegency(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/17"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/17"));
         sendPhoto.setCaption(
                 "🏢Hyatt Regency Tashkent ⭐️⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1594,7 +1854,7 @@ public class Hotelservice {
     public static SendPhoto wyndhamTashkent(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/18"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/18"));
         sendPhoto.setCaption(
                 "🏢Wyndham Tashkent ⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1621,7 +1881,7 @@ public class Hotelservice {
     public static SendPhoto courtyardMarriott(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/19"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/19"));
         sendPhoto.setCaption(
                 "🏢Courtyard by Marriott Tashkent ⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1648,7 +1908,7 @@ public class Hotelservice {
     public static SendPhoto levelHotel(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/20"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/20"));
         sendPhoto.setCaption(
                 "🏢Level Hotel and BC ⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1676,7 +1936,7 @@ public class Hotelservice {
     public static SendPhoto uzbegimAndijon(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/21"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/21"));
         sendPhoto.setCaption(
                 "🏢O'zbegim Andijon ⭐️⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1703,7 +1963,7 @@ public class Hotelservice {
     public static SendPhoto andijonGrand(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/22"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/22"));
         sendPhoto.setCaption(
                 "🏢Andijon Grand Hotel ⭐️⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1730,7 +1990,7 @@ public class Hotelservice {
     public static SendPhoto asiaAndijan(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/23"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/23"));
         sendPhoto.setCaption(
                 "🏢Asia Andijan Hotel ⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1757,7 +2017,7 @@ public class Hotelservice {
     public static SendPhoto globalStar(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/24"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/24"));
         sendPhoto.setCaption(
                 "🏢Global Star Hotel ⭐️⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1784,7 +2044,7 @@ public class Hotelservice {
     public static SendPhoto hamkorBankHotel(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/25"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/25"));
         sendPhoto.setCaption(
                 "🏢Hamkor Bank Hotel ⭐️⭐️⭐️" +
                         "\n\nAfzalliklar: " +
@@ -1812,7 +2072,7 @@ public class Hotelservice {
     public static SendPhoto wyndhamBukhara(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/26"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/26"));
         sendPhoto.setCaption(
                 "🏢 **Wyndham Bukhara** ⭐️⭐️⭐️⭐️⭐️" +
                         "\n\n**Afzalliklar:** " +
@@ -1839,7 +2099,7 @@ public class Hotelservice {
     public static SendPhoto minoraiKalon(long chatId) {
         SendPhoto sendPhoto = new SendPhoto();
         sendPhoto.setChatId(chatId);
-        sendPhoto.setPhoto(new InputFile("https://t.me/c/3439385574/27"));
+        sendPhoto.setPhoto(new InputFile("https://t.me/hotelphoto/27"));
         sendPhoto.setCaption(
                 "🏢 **Minorai Kalon Hotel** ⭐️⭐️⭐️⭐️⭐️" +
                         "\n\n**Afzalliklar:** " +

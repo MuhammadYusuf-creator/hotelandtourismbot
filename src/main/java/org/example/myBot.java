@@ -84,7 +84,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Toshkentdagi mehmonxonalar. Quyidagi mehmonxonalardan birini tanlang:");
 
                 editMessageText.setReplyMarkup(hotel.toshkent(chatId));
 
@@ -99,7 +99,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Andijon viloyati mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.andijon1(chatId));
 
@@ -114,9 +114,24 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Buxorodagi mehmonxonalar:");
 
                 editMessageText.setReplyMarkup(hotel.buxoro1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("jizzaxId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Jizzax viloyati mehmonxonalari:");
+
+                editMessageText.setReplyMarkup(hotel.jizzax1(chatId));
 
                 try {
                     execute(editMessageText);
@@ -129,7 +144,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Qashqadaryo mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.qashqadaryo1(chatId));
 
@@ -144,7 +159,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Navoiy viloyati mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.navoiy1(chatId));
 
@@ -159,7 +174,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Namangan viloyati mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.namangan1(chatId));
 
@@ -174,7 +189,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Samarqanddagi mehmonxonalar:");
 
                 editMessageText.setReplyMarkup(hotel.samarqand1(chatId));
 
@@ -189,9 +204,24 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Surxondaryo mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.surxondaryo1(chatId));
+
+                try {
+                    execute(editMessageText);
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+            if (data.equals("sirdaryoId")){
+                EditMessageText editMessageText = new EditMessageText();
+                editMessageText.setChatId(chatId);
+                editMessageText.setMessageId(messageId);
+                editMessageText.setText("Sirdaryo viloyati mehmonxonalari:");
+
+                editMessageText.setReplyMarkup(hotel.sirdaryo1(chatId));
 
                 try {
                     execute(editMessageText);
@@ -204,7 +234,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Farg'ona viloyati mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.fargona1(chatId));
 
@@ -219,7 +249,7 @@ public class myBot extends TelegramLongPollingBot {
                 EditMessageText editMessageText = new EditMessageText();
                 editMessageText.setChatId(chatId);
                 editMessageText.setMessageId(messageId);
-                editMessageText.setText("Hotellarni tanlang");
+                editMessageText.setText("Xorazm mehmonxonalari:");
 
                 editMessageText.setReplyMarkup(hotel.xorazm1(chatId));
 
@@ -229,6 +259,694 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+            //viloyatlar tugadi
+
+
+
+// 1. Hilton Tashkent City
+            if (data.equals("tashkent_hilton")) {
+                try {
+                    execute(hotel.hilton(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Hyatt Regency Tashkent
+            if (data.equals("tashkent_hyatt")) {
+                try {
+                    execute(hotel.hyattRegency(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Wyndham Tashkent
+            if (data.equals("tashkent_wyndham")) {
+                try {
+                    execute(hotel.wyndhamTashkent(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Courtyard by Marriott Tashkent
+            if (data.equals("tashkent_marriott")) {
+                try {
+                    execute(hotel.courtyardMarriott(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Level Hotel and BC
+            if (data.equals("tashkent_level")) {
+                try {
+                    execute(hotel.levelHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun
+            if (data.equals("ortgatoshkent")) {
+                try {
+                    execute(hotel.toshkent1(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+
+// 1. O'zbegim Andijon
+            if (data.equals("andijon_uzbegim")) {
+                try {
+                    execute(hotel.uzbegimAndijon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Andijon Grand Hotel
+            if (data.equals("andijon_grand")) {
+                try {
+                    execute(hotel.andijonGrand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Asia Andijan Hotel
+            if (data.equals("andijon_asia")) {
+                try {
+                    execute(hotel.asiaAndijan(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Global Star Hotel
+            if (data.equals("andijon_global")) {
+                try {
+                    execute(hotel.globalStar(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Hamkor Bank Hotel
+            if (data.equals("andijon_hamkor")) {
+                try {
+                    execute(hotel.hamkorBankHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Andijon ro'yxatiga qaytish)
+            if (data.equals("ortgaandijon")) {
+                try {
+                    execute(hotel.andijon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+
+// 1. Wyndham Bukhara
+            if (data.equals("buxoro_wyndham")) {
+                try {
+                    execute(hotel.wyndhamBukhara(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Minorai Kalon Hotel
+            if (data.equals("buxoro_minora")) {
+                try {
+                    execute(hotel.minoraiKalon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Devon Begi Hotel
+            if (data.equals("buxoro_devonbegi")) {
+                try {
+                    execute(hotel.devonBegi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Omar Khayyam Hotel
+            if (data.equals("buxoro_omarkhayyam")) {
+                try {
+                    execute(hotel.omarKhayyam(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Sasha & Son Boutique Hotel
+            if (data.equals("buxoro_sasha")) {
+                try {
+                    execute(hotel.sashaSon(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Buxoro ro'yxatiga qaytish)
+            if (data.equals("ortgabuxoro")) {
+                try {
+                    execute(hotel.buxoro(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+
+// 1. Grand Hotel Zomin
+            if (data.equals("jizzax_zomin")) {
+                try {
+                    execute(hotel.grandHotelZomin(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Silk Road Jizzax
+            if (data.equals("jizzax_silkroad")) {
+                try {
+                    execute(hotel.silkRoadJizzax(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Sogdiana Hotel
+            if (data.equals("jizzax_sogdiana")) {
+                try {
+                    execute(hotel.sogdianaHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Grand Hotel Jizzakh
+            if (data.equals("jizzax_grand")) {
+                try {
+                    execute(hotel.grandHotelJizzakh(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Tashkent plaza in jizzax
+            if (data.equals("jizzax_markaziy")) {
+                try {
+                    // Sizning SendPhoto metodining nomi: tashkentPlazaJizzax
+                    execute(hotel.tashkentPlazaJizzax(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Jizzax ro'yxatiga qaytish)
+            if (data.equals("ortgajizzax")) {
+                try {
+                    execute(hotel.jizzax(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Shahrisabz Hotel
+            if (data.equals("qashqadaryo_shahrisabz")) {
+                try {
+                    execute(hotel.shahrisabzHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Nasaf Hotel (Qarshi)
+            if (data.equals("qashqadaryo_nasaf")) {
+                try {
+                    execute(hotel.nasafHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Sultan Hotel (Koddagi nom Sultan hotel, callback Bahrin deb belgilangan)
+            if (data.equals("qashqadaryo_bahrin")) { // Koddagi callback: qashqadaryo_bahrin
+                try {
+                    execute(hotel.sultanHotel(chatId)); // Koddagi metod: sultanHotel
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Grand Hotel Shahrisabz
+            if (data.equals("qashqadaryo_grand")) {
+                try {
+                    execute(hotel.grandHotelShahrisabz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Muborak Hotel
+            if (data.equals("qashqadaryo_muborak")) {
+                try {
+                    execute(hotel.muborakHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Qashqadaryo ro'yxatiga qaytish)
+            if (data.equals("ortgaqashqadaryo")) {
+                try {
+                    execute(hotel.qashqadaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Zarafshon Grand Hotel
+            if (data.equals("navoiy_zarafshon")) {
+                try {
+                    execute(hotel.zarafshonGrand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Hotel Navoiy Palace
+            if (data.equals("navoiy_palace")) {
+                try {
+                    execute(hotel.hotelNavoiyPalace(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Silk Road by Navoi
+            if (data.equals("navoiy_silkroad")) {
+                try {
+                    execute(hotel.silkRoadByNavoi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Grand Star Navoi
+            if (data.equals("navoiy_grandstar")) {
+                try {
+                    execute(hotel.grandStarNavoi(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Navoiy City Hotel
+            if (data.equals("navoiy_city")) {
+                try {
+                    execute(hotel.navoiyCityHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Navoiy ro'yxatiga qaytish)
+            if (data.equals("ortganavoiy")) {
+                try {
+                    execute(hotel.navoiy(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Wyndham Namangan
+            if (data.equals("namangan_wyndham")) {
+                try {
+                    execute(hotel.wyndhamNamangan(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Namangan Plaza Hotel
+            if (data.equals("namangan_plaza")) {
+                try {
+                    execute(hotel.namanganPlaza(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Afsona Hotel Namangan
+            if (data.equals("namangan_afsona")) {
+                try {
+                    execute(hotel.afsonaHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Hotel Namangan Sayyoh
+            if (data.equals("namangan_sayyoh")) {
+                try {
+                    execute(hotel.namanganSayyoh(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Fajr Hotel
+            if (data.equals("namangan_fajr")) {
+                try {
+                    execute(hotel.fajrHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Namangan ro'yxatiga qaytish)
+            if (data.equals("ortganamangan")) {
+                try {
+                    execute(hotel.namangan(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Mövenpick Samarkand
+            if (data.equals("samarqand_movenpick")) {
+                try {
+                    execute(hotel.movenpickSamarkand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Silk Road by Minyoun
+            if (data.equals("samarqand_minyoun")) {
+                try {
+                    execute(hotel.silkRoadByMinyoun(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Plaza Hotel Samarkand
+            if (data.equals("samarqand_plaza")) {
+                try {
+                    execute(hotel.plazaHotelSamarkand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Registon Plaza Hotel
+            if (data.equals("samarqand_registon")) {
+                try {
+                    execute(hotel.registonPlaza(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Malika Prime Hotel
+            if (data.equals("samarqand_malika")) {
+                try {
+                    execute(hotel.malikaPrime(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Samarqand ro'yxatiga qaytish)
+            if (data.equals("ortgasamarqand")) {
+                try {
+                    execute(hotel.samarqand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Grand Termiz Hotel
+            if (data.equals("surxondaryo_grandtermiz")) {
+                try {
+                    execute(hotel.grandTermiz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Silk Road Termiz
+            if (data.equals("surxondaryo_silkroad")) {
+                try {
+                    execute(hotel.silkRoadTermiz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Termiz Palace Hotel
+            if (data.equals("surxondaryo_palace")) {
+                try {
+                    execute(hotel.termizPalace(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Asson Termiz
+            if (data.equals("surxondaryo_asson")) {
+                try {
+                    execute(hotel.assonTermiz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Markaziy Mehmonxona (markaziyMehmonxonaTermiz)
+            if (data.equals("surxondaryo_markaziy")) {
+                try {
+                    execute(hotel.markaziyMehmonxonaTermiz(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Surxondaryo ro'yxatiga qaytish)
+            if (data.equals("ortgasurxondaryo")) {
+                try {
+                    execute(hotel.surxondaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Grand Hotel Guliston
+            if (data.equals("sirdaryo_grand")) {
+                try {
+                    execute(hotel.grandHotelGuliston(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Shodlik Palace Hotel
+            if (data.equals("sirdaryo_shodlik")) {
+                try {
+                    execute(hotel.shodlikPalace(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Sirdaryo Hotel
+            if (data.equals("sirdaryo_hotel")) {
+                try {
+                    execute(hotel.sirdaryoHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Oasis Hotel Guliston
+            if (data.equals("sirdaryo_oasis")) {
+                try {
+                    execute(hotel.oasisHotelGuliston(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Ideal Hotel Guliston
+            if (data.equals("sirdaryo_ideal")) {
+                try {
+                    execute(hotel.idealHotelGuliston(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Sirdaryo ro'yxatiga qaytish)
+            if (data.equals("ortgasirdaryo")) {
+                try {
+                    execute(hotel.sirdaryo(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+
+// 1. Rixos Kokand
+            if (data.equals("fargona_rixos")) {
+                try {
+                    execute(hotel.rixosKokand(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. King Premium Hotel Fergana
+            if (data.equals("fargona_king")) {
+                try {
+                    execute(hotel.kingPremiumHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Asia Fergana Hotel
+            if (data.equals("fargona_asia")) {
+                try {
+                    execute(hotel.asiaFergana(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Fergana Hotel
+            if (data.equals("fargona_hotel")) {
+                try {
+                    execute(hotel.ferganaHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Voyage Hotel Fergana
+            if (data.equals("fargona_voyage")) {
+                try {
+                    execute(hotel.voyageHotel(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Farg'ona ro'yxatiga qaytish)
+            if (data.equals("ortgafargona")) {
+                try {
+                    execute(hotel.fargona(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+
+// 1. Khiva Silk Road Palace
+            if (data.equals("xorazm_silkroad")) {
+                try {
+                    execute(hotel.khivaSilkRoadPalace(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 2. Meros Hotel Khiva
+            if (data.equals("xorazm_meros")) {
+                try {
+                    execute(hotel.merosHotelKhiva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 3. Asia Khiva Hotel
+            if (data.equals("xorazm_asia")) {
+                try {
+                    execute(hotel.asiaKhiva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 4. Zarafshon Xiva Hotel (Urganch)
+            if (data.equals("xorazm_zarafshon")) {
+                try {
+                    execute(hotel.zarafshonXiva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// 5. Orient Star Khiva
+            if (data.equals("xorazm_orientstar")) {
+                try {
+                    execute(hotel.orientStarKhiva(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+// ⬅️ Orqaga tugmasi uchun (Xorazm ro'yxatiga qaytish)
+            if (data.equals("ortgaxorazm")) {
+                try {
+                    execute(hotel.xorazm(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+
+            if (data.equals("orqagamenu")) {
+                try {
+                    execute(hotel.shaharlarhotel1(chatId));
+                } catch (TelegramApiException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
 
             if (data.equals("menutourismId")) {
                 EditMessageText editMessageText = new EditMessageText();
@@ -259,8 +977,6 @@ public class myBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
-
-
 
             if (data.equals("toshkenttourismId")) {
                 EditMessageText editMessageText = new EditMessageText();
